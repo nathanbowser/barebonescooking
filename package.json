@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node node_modules/ghost/index.js"
+    "start": "node node_modules/ghost/index.js",
+    "ship": "mkdir temp && buster generate --dir=temp && mv temp/* ./ && buster deploy --dir=."
   },
   "author": "",
   "license": "ISC",
