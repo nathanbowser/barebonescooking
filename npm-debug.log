@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'ship' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose run-script [ 'preship', 'ship', 'postship' ]
+5 info preship kblog@1.0.0
+6 info ship kblog@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info kblog@1.0.0 Failed to exec ship script
+9 error kblog@1.0.0 ship: `mkdir -p temp && buster generate --dir=temp && mv temp/* ./ && buster deploy --dir=.`
+9 error Exit status 1
+10 error Failed at the kblog@1.0.0 ship script.
+10 error This is most likely a problem with the kblog package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     mkdir -p temp && buster generate --dir=temp && mv temp/* ./ && buster deploy --dir=.
+10 error You can get their info via:
+10 error     npm owner ls kblog
+10 error There is likely additional logging output above.
+11 error System Darwin 13.4.0
+12 error command "node" "/usr/local/bin/npm" "run" "ship"
+13 error cwd /Users/koopa/dev/barebonescooking
+14 error node -v v0.10.32
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
