@@ -7,13 +7,13 @@
 6 info ship kblog@1.0.0
 7 verbose unsafe-perm in lifecycle true
 8 info kblog@1.0.0 Failed to exec ship script
-9 error kblog@1.0.0 ship: `mkdir -p temp && buster generate --dir=temp && mv temp/* ./ && buster deploy --dir=.`
-9 error Exit status 1
+9 error kblog@1.0.0 ship: `mkdir -p temp && buster generate --dir=temp && rsync -av --remove-source-files temp/* ./ && buster deploy --dir=. && rm -rf temp`
+9 error Exit status 23
 10 error Failed at the kblog@1.0.0 ship script.
 10 error This is most likely a problem with the kblog package,
 10 error not with npm itself.
 10 error Tell the author that this fails on your system:
-10 error     mkdir -p temp && buster generate --dir=temp && mv temp/* ./ && buster deploy --dir=.
+10 error     mkdir -p temp && buster generate --dir=temp && rsync -av --remove-source-files temp/* ./ && buster deploy --dir=. && rm -rf temp
 10 error You can get their info via:
 10 error     npm owner ls kblog
 10 error There is likely additional logging output above.
