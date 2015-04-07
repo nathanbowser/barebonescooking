@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/ghost/index.js",
-    "replace": "find . -type f -not -path './node_modules/*' -not -path './.git/*' -name '*.html' -exec sed -i '' 's/localhost:2368/barebonescooking\\.com/g' {} +",
+    "replace": "find . -type f -not -path './node_modules/*' -not -path './.git/*' -name '*.html' -o -name '*.rss' -exec sed -i '' 's/localhost:2368/barebonescooking\\.com/g' {} +",
     "ship": "mkdir -p temp && buster generate --dir=temp && rsync -av --remove-source-files temp/* ./ && npm run replace && buster deploy --dir=. && rm -rf temp"
   },
   "author": "",
